@@ -1,0 +1,35 @@
+.container {
+  margin: 1cm;
+}
+
+.card {
+  box-shadow: 1px 5px 8px;
+}
+
+.card-header {
+  background-color: #11dd11; font-weight: bold;
+}
+
+.btn-success {
+  background-color: #11dd11; font-weight: 550;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.lista {
+  margin: 4mm;
+}
+
+.encabezado {
+  margin-left: 17mm;
+  margin-top: 9mm;
+  margin-bottom: 4mm;
+}
+
+.example-radio-group {
+  display: flex; flex-direction: column;
+  /* display: inline-grid; */ 
+  /* display: grid; */
+  margin: 15px 0;
+}

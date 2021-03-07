@@ -1,0 +1,86 @@
+<div class="container">
+  <div class="mx-auto">
+    <div class="card rounded-lg mx-auto">
+      <div class="card-header">
+        Nuevo PILARES
+      </div>
+      <div class="card-body" style="background-color: #ffffff;">
+        <form (ngSubmit)="onSubmit()" #formPilares="ngForm">
+          <div class="form-group">
+              <mat-form-field class="example-full-width" [style.width.%]="100">
+                <mat-label>Nombre del PILARES</mat-label>
+                <input class="form-control" matInput name="nombre" [(ngModel)]="pilares.nombre">
+              </mat-form-field>
+          </div>
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <mat-form-field appearance="fill" [style.width.cm]="11">
+                  <mat-label>Alcaldía</mat-label>
+                  <select matNativeControl [(ngModel)]="pilares.alcaldia" name="alcaldia">
+                    <option value="" selected></option>
+                    <option *ngFor="let alc of alcaldias" [value]="alc.id">
+                      {{alc.nombre}}
+                    </option>
+                  </select>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field appearance="fill" [style.width.%]="100">
+                  <mat-label>LCPO Responsable</mat-label>
+                  <select matNativeControl [(ngModel)]="pilares.responsable" name="lcpo">
+                    <option value="" selected></option>
+                    <option *ngFor="let lcp of lcpo" [value]="lcp.id">
+                      {{lcp.director}}
+                    </option>
+                  </select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <mat-form-field class="example-full-width" [style.width.%]="100">
+              <mat-label>Dirección</mat-label>
+              <textarea class="form-control" matInput
+              name="ubicacion" [(ngModel)]="pilares.ubicacion"></textarea>
+            </mat-form-field>
+          </div>
+          <div>
+            <label id="example-radio-group-label">Estado: </label>
+          </div>
+          <!-- <mat-form-field> -->
+          <div class="form-group">
+            <div class="row">
+              <div class="col">
+                <mat-radio-group
+                aria-labelledby="example-radio-group-label"
+                class="example-radio-group"
+                fxLayout="column"
+                [(ngModel)]="pilares.estado" name="status">
+                  <mat-radio-button class="example-radio-button" *ngFor="let sea of status" [value]="sea.id">
+                    {{sea.estado}}
+                  </mat-radio-button>
+                </mat-radio-group>
+              </div>
+              <div class="col">
+                <mat-form-field appearance="fill">
+                  <mat-label>Fecha de apertura:</mat-label>
+                  <input matInput [matDatepicker]="picker" name="fecha" [(ngModel)]="pilares.fecha">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>                
+              </div>
+            </div>
+          </div>
+          <!-- </mat-form-field> -->
+
+
+          <div class="float-right">
+            <button class="btn btn-danger" type="button" style="margin-right: 5px" (click)="cancel()">Cancelar</button>
+            <button class="btn btn-success" type="submit">Registrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

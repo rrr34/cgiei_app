@@ -1,0 +1,17 @@
+/* .container {
+  margin: 1cm;
+} */
+
+.card {
+  box-shadow: 1px 5px 8px;
+}
+
+.card-header {
+  background-color: #30d330;
+  font-weight: 640;
+  font-size: 18px;
+}
+
+.btn-success {
+  background-color: #09ba09; font-weight: 550;
+}

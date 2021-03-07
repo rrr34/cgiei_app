@@ -1,0 +1,12 @@
+/* .navbar {
+  top: 0em;
+  position: fixed;
+} */
+
+.dark-head {
+  background-color: #484850;
+}
+
+.btn-success {
+  background-color: #09ba09; font-weight: 550;
+}
